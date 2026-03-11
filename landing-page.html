@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Intro Class | Gracie Barra Layton - Brazilian Jiu-Jitsu for Everyone</title>
+    <meta name="description" content="Claim your FREE intro class at Gracie Barra Layton. World-class Brazilian Jiu-Jitsu training for kids & adults. Free uniform with signup + free family classes every Saturday!">
+    <link rel="icon" type="image/webp" href="Current Site Images/cropped-image-10-1-32x32.webp">
+    <style>
+        :root {
+            --gb-red: #C41E3A;
+            --gb-red-dark: #a01830;
+            --gb-blue: #2563eb;
+            --gb-blue-dark: #1d4ed8;
+            --gb-black: #1a1a1a;
+            --gb-dark: #222222;
+            --gb-gray: #555555;
+            --gb-gray-light: #8A94A6;
+            --gb-bg: #f8f9fa;
+            --gb-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gb-black);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Sticky Header */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gb-white);
+            padding: 12px 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sticky-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-header .logo {
+            height: 50px;
+        }
+
+        .cta-btn {
+            background: var(--gb-blue);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn:hover {
+            background: var(--gb-blue-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-btn.red {
+            background: var(--gb-red);
+        }
+
+        .cta-btn.red:hover {
+            background: var(--gb-red-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.6)), url('Current Site Images/Frame-186-2-min-scaled-1.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            color: white;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            background: var(--gb-red);
+            color: white;
+            padding: 6px 16px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            border-radius: 6px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .hero-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .hero-features li {
+            padding: 12px 0;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-features .check {
+            width: 26px;
+            height: 26px;
+            background: var(--gb-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .hero-features .check svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Form Styles */
+        .hero-form {
+            background: var(--gb-white);
+            padding: 36px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-form h3 {
+            color: var(--gb-black);
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            text-align: center;
+            color: var(--gb-gray);
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--gb-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            background: var(--gb-white);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--gb-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--gb-blue);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--gb-blue-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+        }
+
+        .form-trust {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--gb-gray-light);
+        }
+
+        .form-trust svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        .hero-form-benefits {
+            margin-bottom: 24px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e8ecf0;
+            color: var(--gb-black);
+            font-size: 1rem;
+        }
+
+        .benefit-item:last-child {
+            border-bottom: none;
+        }
+
+        .benefit-item svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        /* Value Stack Section */
+        .value-stack {
+            padding: 100px 0;
+            background: var(--gb-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header .tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--gb-blue);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            color: var(--gb-black);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gb-gray);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .section-cta {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .section-cta .cta-btn {
+            padding: 16px 36px;
+            font-size: 1.05rem;
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .value-card {
+            background: var(--gb-bg);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid #e8ecf0;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .value-card .value-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--gb-red);
+            color: white;
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .value-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--gb-red), var(--gb-red-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .value-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .value-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--gb-black);
+        }
+
+        .value-card p {
+            color: var(--gb-gray);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .value-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .value-price .original {
+            text-decoration: line-through;
+            color: var(--gb-gray-light);
+            font-weight: 400;
+            margin-right: 8px;
+        }
+
+        .value-price .free {
+            color: var(--gb-red);
+        }
+
+        /* Total Value Bar */
+        .total-value {
+            background: var(--gb-dark);
+            color: white;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .total-value h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .total-value .amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+
+        .total-value .subtext {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Why GB Section */
+        .why-gb {
+            padding: 100px 0;
+            background: var(--gb-bg);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .why-image {
+            position: relative;
+        }
+
+        .why-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-image .badge {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: var(--gb-red);
+            color: white;
+            padding: 20px 28px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .why-image .badge .number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+
+        .why-image .badge span {
+            font-size: 0.85rem;
+        }
+
+        .why-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 28px;
+            color: var(--gb-black);
+        }
+
+        .why-list {
+            list-style: none;
+        }
+
+        .why-list li {
+            padding: 16px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            font-size: 1rem;
+            border-bottom: 1px solid #e8ecf0;
+        }
+
+        .why-list li:last-child {
+            border-bottom: none;
+        }
+
+        .why-list .icon {
+            width: 28px;
+            height: 28px;
+            background: var(--gb-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .why-list .icon svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
+        }
+
+        .why-list strong {
+            display: block;
+            color: var(--gb-black);
+            margin-bottom: 4px;
+        }
+
+        .why-list .desc {
+            color: var(--gb-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 100px 0;
+            background: var(--gb-white);
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .program-card {
+            background: var(--gb-bg);
+            border: 1px solid #e8ecf0;
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            border-color: var(--gb-blue);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .program-card .age {
+            background: var(--gb-red);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        .program-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--gb-black);
+        }
+
+        .program-card p {
+            font-size: 0.9rem;
+            color: var(--gb-gray);
+            line-height: 1.7;
+        }
+
+        /* Instructors Section */
+        .instructors {
+            padding: 100px 0;
+            background: var(--gb-bg);
+        }
+
+        .instructor-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .instructor-card {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            background: var(--gb-white);
+            padding: 28px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #e8ecf0;
+        }
+
+        .instructor-card img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .instructor-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+            color: var(--gb-black);
+        }
+
+        .instructor-info .title {
+            color: var(--gb-red);
+            font-weight: 600;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+
+        .instructor-info p {
+            color: var(--gb-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--gb-white);
+        }
+
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--gb-bg);
+            padding: 32px;
+            border-radius: var(--radius);
+            border: 1px solid #e8ecf0;
+        }
+
+        .testimonial-card .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card p {
+            color: var(--gb-gray);
+            margin-bottom: 24px;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--gb-black);
+        }
+
+        .testimonial-card .source {
+            color: var(--gb-gray-light);
+            font-size: 0.85rem;
+        }
+
+        /* Trust Badges */
+        .trust-section {
+            padding: 60px 0;
+            background: var(--gb-bg);
+            border-top: 1px solid #e8ecf0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .trust-item .number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gb-red);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .trust-item p {
+            color: var(--gb-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            padding: 100px 0;
+            background: var(--gb-white);
+        }
+
+        .schedule-image {
+            text-align: center;
+        }
+
+        .schedule-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Book Trial Section */
+        .book-trial {
+            padding: 100px 0;
+            background: var(--gb-bg);
+        }
+
+        .trial-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        #trial-widget {
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 32px;
+            background: #ffffff;
+        }
+
+        .trial-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+            width: 100%;
+            padding: 0 20px 20px 20px;
+        }
+
+        #class-selection {
+            margin-top: 8px;
+        }
+
+        .trial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .trial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .trial-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, border 0.12s ease;
+            border: 1px solid transparent;
+        }
+
+        .trial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+
+        .trial-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .trial-card-header img {
+            height: 100px;
+            width: auto;
+        }
+
+        .trial-title-card {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .trial-subtitle {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .trial-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .clock-icon {
+            width: 15px;
+            height: 15px;
+            fill: #8A94A6;
+            display: inline-block;
+        }
+
+        #calendar-view {
+            display: none;
+        }
+
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #2563eb;
+            cursor: pointer;
+        }
+
+        .back-button span.icon {
+            font-size: 1.1rem;
+        }
+
+        .selected-class-label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .calendar-frame-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+
+        .calendar-iframe {
+            width: 100%;
+            border: none;
+            overflow: hidden;
+            min-height: 750px;
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .calendar-iframe {
+                min-height: 750px;
+            }
+
+            #trial-widget {
+                padding: 20px 16px;
+            }
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--gb-red), var(--gb-red-dark));
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.6rem;
+            margin-bottom: 18px;
+        }
+
+        .final-cta p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 36px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .final-cta .cta-btn {
+            background: white;
+            color: var(--gb-red);
+            padding: 18px 48px;
+            font-size: 1.15rem;
+        }
+
+        .final-cta .cta-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gb-dark);
+            color: white;
+            padding: 60px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand img {
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            opacity: 0.7;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        footer h5 {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-contact p, .footer-hours p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer-contact a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 32px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-features {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .value-cards {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-image {
+                order: -1;
+            }
+
+            .why-image .badge {
+                right: 20px;
+                bottom: -20px;
+            }
+
+            .program-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .instructor-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-header {
+                padding: 10px 0;
+            }
+
+            .sticky-header .logo {
+                height: 42px;
+            }
+
+            .cta-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-form {
+                padding: 28px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .program-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .instructor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .total-value .amount {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <img src="Current Site Images/image-10-1.webp" alt="Gracie Barra Layton" class="logo">
+            <a href="#book-trial" class="cta-btn">Claim Free Class</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="signup">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Limited Time Offer</span>
+                    <h1>Transform Your Life With Brazilian Jiu-Jitsu</h1>
+                    <p class="hero-subtitle">Join the world's largest Jiu-Jitsu network right here in Layton, Utah. Build confidence, get fit, and learn real self-defense skills for the whole family.</p>
+                    <ul class="hero-features">
+                        <li>
+                            <span class="check">
+                                <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            </span>
+                            FREE 1-Hour Intro Class ($75 Value)
+                        </li>
+                        <li>
+                            <span class="check">
+                                <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            </span>
+                            FREE Official GB Uniform with Sign-Up ($150+ Value)
+                        </li>
+                        <li>
+                            <span class="check">
+                                <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            </span>
+                            FREE Family Classes Every Saturday at 10 AM
+                        </li>
+                        <li>
+                            <span class="check">
+                                <svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            </span>
+                            World-Class Certified Black Belt Instructors
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-form">
+                    <h3>Claim Your Free Class</h3>
+                    <p class="form-subtitle">No experience needed. All fitness levels welcome.</p>
+                    <div class="hero-form-benefits">
+                        <div class="benefit-item">
+                            <svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Free 1-Hour Intro Class</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Free GB Uniform ($150+ value)</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Free Saturday Family Classes</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Programs for Ages 3 to Adult</span>
+                        </div>
+                    </div>
+                    <a href="#book-trial" class="submit-btn" style="display: block; text-align: center; text-decoration: none;">Schedule Your Free Class</a>
+                    <p class="form-trust">
+                        <svg viewBox="0 0 24 24" fill="#8A94A6"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        No credit card required. No obligation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack Section -->
+    <section class="value-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Special Offer</span>
+                <h2>Your Exclusive New Member Package</h2>
+                <p>We're so confident you'll love training with us that we're giving you everything you need to start your journey risk-free.</p>
+            </div>
+            <div class="value-cards">
+                <div class="value-card">
+                    <span class="value-badge">Free</span>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h4>1-Hour Intro Class</h4>
+                    <p>Experience a full class with our expert instructors. Learn fundamental techniques and feel the energy of our welcoming community.</p>
+                    <div class="value-price">
+                        <span class="original">$75</span>
+                        <span class="free">FREE</span>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <span class="value-badge">Free</span>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21.6 18.2L13 11.75v-.91a3.496 3.496 0 00-.18-6.75 3.51 3.51 0 00-3.32 3.32 3.49 3.49 0 001.86 3.43v.91L2.4 18.2c-.25.19-.4.49-.4.8 0 .55.45 1 1 1h18c.55 0 1-.45 1-1 0-.31-.15-.61-.4-.8z"/></svg>
+                    </div>
+                    <h4>Official GB Uniform</h4>
+                    <p>Get your complete Gracie Barra gi (uniform) including jacket, pants, and belt absolutely free when you sign up for membership.</p>
+                    <div class="value-price">
+                        <span class="original">$150+</span>
+                        <span class="free">FREE</span>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <span class="value-badge">Weekly</span>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h4>Free Family Classes</h4>
+                    <p>Every Saturday at 10:00 AM, train together as a family. Open to all ages and skill levels with no commitment required.</p>
+                    <div class="value-price">
+                        <span class="free">INCLUDED</span>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#book-trial" class="cta-btn">Claim Your Free Class Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Total Value Bar -->
+    <div class="total-value">
+        <div class="container">
+            <h3>Total Value of Your New Member Package</h3>
+            <div class="amount">$225+ FREE</div>
+            <p class="subtext">Claim your package today before this offer expires</p>
+        </div>
+    </div>
+
+    <!-- Book Trial Section -->
+    <section class="book-trial" id="book-trial">
+        <div class="trial-wrapper" id="trial-widget">
+            <h2 class="trial-title">Select Your Trial Class</h2>
+
+            <!-- Screen 1: Class Selection -->
+            <div id="class-selection">
+                <div class="trial-grid" id="trial-class-selector">
+
+                    <!-- Little Champions 1 -->
+                    <div class="trial-card"
+                         data-target="calendar-lc1"
+                         data-name="Little Champions 1 (3–6 Years Old)">
+                        <div class="trial-card-header">
+                            <img src="Current Site Images/Frame-1321314861.png" alt="Little Champions 1">
+                            <div class="trial-title-card">Little Champions 1 (3-6 Years Old)</div>
+                        </div>
+                        <div class="trial-meta">
+                            <svg class="clock-icon" viewBox="0 0 24 24">
+                                <path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12ZM12,1C5.935,1,1,5.935,1,12s4.935,11,11,11,11-4.935,11-11S18.065,1,12,1Zm3.395,15.693l-3.395-4.364V5h-1v7.671l3.605,4.636,.789-.614Z"/>
+                            </svg>
+                            55 mins
+                        </div>
+                    </div>
+
+                    <!-- Little Champions 2 -->
+                    <div class="trial-card"
+                         data-target="calendar-lc2"
+                         data-name="Little Champions 2 (7–9 Years Old)">
+                        <div class="trial-card-header">
+                            <img src="Current Site Images/Frame-1321314861.png" alt="Little Champions 2">
+                            <div class="trial-title-card">Little Champions 2 (7-9 Years Old)</div>
+                        </div>
+                        <div class="trial-meta">
+                            <svg class="clock-icon" viewBox="0 0 24 24">
+                                <path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12ZM12,1C5.935,1,1,5.935,1,12s4.935,11,11,11,11-4.935,11-11S18.065,1,12,1Zm3.395,15.693l-3.395-4.364V5h-1v7.671l3.605,4.636,.789-.614Z"/>
+                            </svg>
+                            55 mins
+                        </div>
+                    </div>
+
+                    <!-- Juniors / Teens -->
+                    <div class="trial-card"
+                         data-target="calendar-jt"
+                         data-name="Juniors / Teens (10–15 Years Old)">
+                        <div class="trial-card-header">
+                            <img src="Current Site Images/Frame-1321314861.png" alt="Juniors / Teens">
+                            <div class="trial-title-card">Juniors/Teens (10-15 Years Old)</div>
+                        </div>
+                        <div class="trial-meta">
+                            <svg class="clock-icon" viewBox="0 0 24 24">
+                                <path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12ZM12,1C5.935,1,1,5.935,1,12s4.935,11,11,11,11-4.935,11-11S18.065,1,12,1Zm3.395,15.693l-3.395-4.364V5h-1v7.671l3.605,4.636,.789-.614Z"/>
+                            </svg>
+                            55 mins
+                        </div>
+                    </div>
+
+                    <!-- Adults -->
+                    <div class="trial-card"
+                         data-target="calendar-adults"
+                         data-name="Adults - All Levels">
+                        <div class="trial-card-header">
+                            <img src="Current Site Images/Frame-1321314860.png" alt="Adults">
+                            <div class="trial-title-card">Adults - All Levels</div>
+                        </div>
+                        <div class="trial-meta">
+                            <svg class="clock-icon" viewBox="0 0 24 24">
+                                <path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12-5.383,12-12,12ZM12,1C5.935,1,1,5.935,1,12s4.935,11,11,11,11-4.935,11-11S18.065,1,12,1Zm3.395,15.693l-3.395-4.364V5h-1v7.671l3.605,4.636,.789-.614Z"/>
+                            </svg>
+                            1 hr
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Screen 2: Calendar View -->
+            <div id="calendar-view">
+                <div class="calendar-header">
+                    <div class="back-button" id="back-to-classes">
+                        <span class="icon">←</span>
+                        <span>Back to class selection</span>
+                    </div>
+                    <span class="selected-class-label" id="selected-class-name"></span>
+                </div>
+
+                <div class="calendar-frame-wrapper">
+                    <!-- Using your GoHighLevel calendar group for all classes -->
+                    <iframe
+                        id="calendar-lc1"
+                        class="calendar-iframe"
+                        src="https://api.leadconnectorhq.com/widget/group/4it68ofNQ5ffJcAjyAYA"
+                        scrolling="yes">
+                    </iframe>
+
+                    <iframe
+                        id="calendar-lc2"
+                        class="calendar-iframe"
+                        src="https://api.leadconnectorhq.com/widget/group/4it68ofNQ5ffJcAjyAYA"
+                        scrolling="yes">
+                    </iframe>
+
+                    <iframe
+                        id="calendar-jt"
+                        class="calendar-iframe"
+                        src="https://api.leadconnectorhq.com/widget/group/4it68ofNQ5ffJcAjyAYA"
+                        scrolling="yes">
+                    </iframe>
+
+                    <iframe
+                        id="calendar-adults"
+                        class="calendar-iframe"
+                        src="https://api.leadconnectorhq.com/widget/group/4it68ofNQ5ffJcAjyAYA"
+                        scrolling="yes">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Gracie Barra Section -->
+    <section class="why-gb">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-image">
+                    <img src="Current Site Images/Captura-de-tela-2024-10-30-164554.webp" alt="Gracie Barra Students Training">
+                    <div class="badge">
+                        <span class="number">1,100+</span>
+                        <span>Schools Worldwide</span>
+                    </div>
+                </div>
+                <div class="why-content">
+                    <h2>Why Train at Gracie Barra Layton?</h2>
+                    <ul class="why-list">
+                        <li>
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            <div>
+                                <strong>World's Largest Jiu-Jitsu Network</strong>
+                                <span class="desc">Part of over 1,100 schools in 50+ countries. Train anywhere in the world with your membership.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            <div>
+                                <strong>Certified Black Belt Instructors</strong>
+                                <span class="desc">All instructors complete rigorous certification including background checks and CPR training.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            <div>
+                                <strong>"Jiu-Jitsu for Everyone" Philosophy</strong>
+                                <span class="desc">Whether you're 3 or 63, athletic or just starting out - our curriculum meets you where you are.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            <div>
+                                <strong>Family-Focused Environment</strong>
+                                <span class="desc">Multiple family members can train together at different levels. Build bonds while building skills.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </span>
+                            <div>
+                                <strong>Anti-Bullying & Character Development</strong>
+                                <span class="desc">Our kids programs build confidence, discipline, and respect that transfer to school and life.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 32px;">
+                        <a href="#book-trial" class="cta-btn">Schedule Your Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Our Programs</span>
+                <h2>Programs for Every Age</h2>
+                <p>From toddlers to adults, we have structured programs designed to develop skills, confidence, and character at every stage.</p>
+            </div>
+            <div class="program-cards">
+                <div class="program-card">
+                    <span class="age">Ages 3-6</span>
+                    <h4>Little Champions 1</h4>
+                    <p>Fun, playful introduction to martial arts focusing on motor skills, coordination, and foundational movements through games.</p>
+                </div>
+                <div class="program-card">
+                    <span class="age">Ages 7-9</span>
+                    <h4>Little Champions 2</h4>
+                    <p>Progressive skill development with more technical jiu-jitsu instruction. Building discipline and anti-bullying confidence.</p>
+                </div>
+                <div class="program-card">
+                    <span class="age">Ages 10-15</span>
+                    <h4>Juniors & Teens</h4>
+                    <p>Advanced techniques in both gi and no-gi training. Leadership development and optional competition preparation.</p>
+                </div>
+                <div class="program-card">
+                    <span class="age">16+</span>
+                    <h4>Adults All Levels</h4>
+                    <p>Comprehensive training from fundamentals to advanced. Self-defense, fitness, stress relief, and a supportive community.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#book-trial" class="cta-btn">Find Your Program - Book Free Class</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Expert Instruction</span>
+                <h2>Learn from The Best</h2>
+                <p>Our certified black belt instructors are dedicated to your success on and off the mat.</p>
+            </div>
+            <div class="instructor-cards">
+                <div class="instructor-card">
+                    <img src="Current Site Images/professor-e1763747656840.jpg" alt="Professor Steve Crisler">
+                    <div class="instructor-info">
+                        <h4>Professor Steve Crisler</h4>
+                        <p class="title">Head Instructor & Owner</p>
+                        <p>After 23 years in accounting, Professor Steve followed his passion and opened Gracie Barra Layton in June 2024. A black belt trained under Master Nelson Monteiro and Professor Rafael Ramos.</p>
+                    </div>
+                </div>
+                <div class="instructor-card">
+                    <img src="Current Site Images/y3OdE-1763851359527-1-e1764010552383.webp" alt="Professor Matheus Oliveira">
+                    <div class="instructor-info">
+                        <h4>Professor Matheus Oliveira</h4>
+                        <p class="title">Instructor</p>
+                        <p>Originally from Brazil with over 14 years of training experience. Known for his patient, detailed instruction that makes all students feel welcome and supported.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#book-trial" class="cta-btn">Train With Our Experts - Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Reviews</span>
+                <h2>What Our Students Say</h2>
+                <p>Real experiences from real members of the Gracie Barra Layton family.</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Gracie Barra Layton was a great school. I visited from out of town and had a great time. Professor Steve ran an amazing class and I would recommend it to anyone in the area."</p>
+                    <div class="author">Visiting Student</div>
+                    <div class="source">Google Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Great place to start learning jiu-jitsu, with an excellent methodology and philosophy. Coach Matheus explains the movements very well and makes us feel very welcome."</p>
+                    <div class="author">New Student</div>
+                    <div class="source">Google Review</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Two of my grandkids tried the free Saturday class and then joined. It has been nothing but a great experience. The cost for the amount of time they get with instruction is amazing."</p>
+                    <div class="author">Proud Grandparent</div>
+                    <div class="source">Google Review</div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#book-trial" class="cta-btn">Join Our Community - Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="number">1,100+</div>
+                    <p>Schools Worldwide</p>
+                </div>
+                <div class="trust-item">
+                    <div class="number">50+</div>
+                    <p>Countries</p>
+                </div>
+                <div class="trust-item">
+                    <div class="number">40+</div>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="trust-item">
+                    <div class="number">100%</div>
+                    <p>Background-Checked Instructors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Find Your Time</span>
+                <h2>Our Class Schedule</h2>
+                <p>Classes available throughout the week for all ages and skill levels.</p>
+            </div>
+            <div class="schedule-image">
+                <img src="Current Site Images/Schedule-Layton-1024x804.webp" alt="Gracie Barra Layton Class Schedule">
+            </div>
+            <div class="section-cta">
+                <a href="#book-trial" class="cta-btn">Pick Your Time - Schedule Free Class</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <span class="urgency-badge">Limited Spots Available</span>
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join the Gracie Barra Layton family today and get your FREE intro class, FREE uniform with sign-up, and access to FREE Saturday family classes.</p>
+            <a href="#book-trial" class="cta-btn">Claim Your Free Class Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Current Site Images/image-10-1.webp" alt="Gracie Barra Layton">
+                    <p>Gracie Barra Layton is part of the world's largest Brazilian Jiu-Jitsu network. Our mission is "Jiu-Jitsu for Everyone" - providing world-class instruction in a welcoming, family-friendly environment.</p>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contact Us</h5>
+                    <p>70 S Fairfield Rd E #4<br>Layton, UT 84041</p>
+                    <p><a href="tel:801-252-6087">(801) 252-6087</a></p>
+                    <p><a href="mailto:steve@gblayton.com">steve@gblayton.com</a></p>
+                    <p><a href="https://gblayton.com" target="_blank">gblayton.com</a></p>
+                </div>
+                <div class="footer-hours">
+                    <h5>Free Saturday Class</h5>
+                    <p>Every Saturday @ 10:00 AM</p>
+                    <p>Open to all ages</p>
+                    <p>No experience needed</p>
+                    <p>No commitment required</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gracie Barra Layton. All rights reserved. | Part of the Gracie Barra Global Network</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GoHighLevel Calendar Embed Script -->
+    <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Trial Class Selection & Calendar Navigation
+        (function () {
+            const wrapper = document.getElementById('trial-widget');
+            const cards = document.querySelectorAll('#trial-class-selector .trial-card');
+            const selectionView = document.getElementById('class-selection');
+            const calendarView = document.getElementById('calendar-view');
+            const backBtn = document.getElementById('back-to-classes');
+            const selectedNameSpan = document.getElementById('selected-class-name');
+            const calendarIframes = document.querySelectorAll('.calendar-iframe');
+
+            function showCalendar(targetId, name) {
+                // Hide all calendars
+                calendarIframes.forEach((iframe) => {
+                    iframe.style.display = 'none';
+                });
+
+                // Show the clicked calendar
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.style.display = 'block';
+                }
+
+                selectedNameSpan.textContent = name ? '– ' + name : '';
+
+                // Switch screens: hide selection, show calendar
+                selectionView.style.display = 'none';
+                calendarView.style.display = 'block';
+
+                // Scroll widget to top
+                wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Click on cards -> show corresponding calendar
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-target');
+                    const name = card.getAttribute('data-name') || '';
+                    if (!targetId) return;
+                    showCalendar(targetId, name);
+                });
+            });
+
+            // Back button -> return to class selection
+            backBtn.addEventListener('click', () => {
+                calendarView.style.display = 'none';
+                selectionView.style.display = 'block';
+
+                // Hide all calendars when going back
+                calendarIframes.forEach((iframe) => {
+                    iframe.style.display = 'none';
+                });
+
+                wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        })();
+    </script>
+</body>
+</html>
